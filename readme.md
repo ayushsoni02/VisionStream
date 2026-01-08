@@ -46,8 +46,8 @@ A real-time object detection web application powered by YOLOv8, Flask, and OpenC
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ayushsoni02/yolov8-Object-detection-web-application-flask.git
-cd yolov8-Object-detection-web-application-flask
+git clone https://github.com/ayushsoni02/VisionStream.git
+cd VisionStream
 ```
 
 ### 2. Create Virtual Environment
