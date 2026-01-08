@@ -5,15 +5,9 @@ window.addEventListener('load', function () {
     // clearTerminal();
     // stopProcess("");
 });
-var show_ad = false;
-
+// Document ready handler
 $(document).ready(function () {
-
-
-    $("#banner2").hide();
-    $("#closeAd").click(function () {
-        $("#banner2").hide(1000);
-    });
+    // Initialization code here if needed
 });
 
 function startVideo() {
@@ -29,24 +23,7 @@ function startWebcam() {
     window.location.href = '/webcam';
 }
 
-// function startVideo() {
-//     var url = $('#url').val();
-//
-//     $.ajax({
-//         url: "/index",
-//         type: "POST",
-//
-//         data: {url: url},
-//         success: function () {
-//             console.log("Video stream started successfully!");
-//
-//             location.reload();
-//         },
-//         error: function () {
-//             console.log("Error starting video stream!");
-//         }
-//     });
-// }
+
 
 function stopProcess(message) {
     console.log("Stop BUTTON");
@@ -63,21 +40,6 @@ function stopProcess(message) {
 }
 
 
-// function clearTerminal() {
-//     // Get a reference to the clear button
-//     const clearButton = document.getElementById('clear-button');
-//
-//     // Add a click event listener to the clear button
-//     clearButton.addEventListener('click', function () {
-//         console.log("CLEAR BUTTON")
-//         document.getElementById('terminal').innerHTML = "";
-//     });
-//
-//     // Clear the terminal on page load
-//     document.getElementById('terminal').innerHTML = "";
-// }
-
-
 //This Code is used to Communicate b/w Client & Server via SOCKETIO
 var socket = io.connect('http://127.0.0.1:8080/');
 
@@ -88,15 +50,6 @@ function appendToTerminal(message) {
                    <td  class="col-md-6">${message[1]}</td></tr></table>`;
     terminal.appendChild(p);
     terminal.scrollTop = terminal.scrollHeight;
-
-    if (show_ad) {
-        let className = message[0];
-        //let ad = '<a href="' + randomObject.product_url + '" target="_blank">Ad Found</a>';
-
-        $('#banner2').show(1000);
-        $("#spanTxt").text(className);
-        $(".no-link").prop("href", "https://www.amazon.com/s?k=" + className);
-    }
 }
 
 //Updating Terminal with Detected Objects
