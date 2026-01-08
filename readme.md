@@ -20,6 +20,10 @@ A real-time object detection web application powered by YOLOv8, Flask, and OpenC
 - **Socket.IO Integration**: Seamless real-time communication between client and server
 - **Responsive UI**: Clean, modern interface with Bootstrap styling
 
+## Screenshots
+![alt text](image.png)
+
+
 ## Technology Stack
 
 ### Backend
